@@ -1,0 +1,197 @@
+
+
+@media screen and (max-width: 1180px){
+    .about_box{
+        width: 90%;
+    }
+    .project__img{
+        width: 40%;
+    
+    }
+
+    .contact-box{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 910px){
+
+    .hero_heading{
+        font-size: 3rem;
+    }
+
+    img.profile_photo{
+        width: 15rem !important;
+        height: 15rem !important;
+    }
+
+    .about_box p{
+        font-size: 1.5rem;
+    }
+
+    .bar{
+        width: 25%;
+        height: 25px;
+    }
+
+    .bar p{
+        font-size: 1.5rem;
+    }
+    
+    .col.left{
+        width: 100% !important;
+        display: block;
+    }
+    .project__img{
+        width: 40%;
+    
+    }
+    
+}
+
+@media screen and (max-width: 750px){
+    .contact-box{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 670px){
+    .hero_heading{
+        font-size: 2rem;
+    }
+
+    img.profile_photo{
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+
+    a.btn-main{
+        padding: 0.5rem 10rem;
+        font-size: 1.5rem;
+    }
+
+    label.navigation__button{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .navigation__background{
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+    }
+    label.navigation__button{
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .bar{
+        width: 15%;
+        height: 15px;
+    }
+
+    .bar p{
+        font-size: 1rem;
+    }
+
+     h3{
+        font-size: 2rem !important;
+    }
+
+    .project__box p{
+        font-size: 1rem;
+    }
+
+    .project__img{
+        border-radius: 5px;
+    }
+
+    .project__img:hover,
+    .project__img:active{
+        transform: scale(2.5);
+    }
+    
+
+    .contact-box{
+        width: 60%;
+    }
+}
+
+    @media screen and (max-width: 500px){
+    .hero_heading{
+        font-size: 2.5rem;
+    }
+        .hero_box{
+            width: 90%;
+        }
+        
+        p.logo_box{
+            margin-top: 2rem !important;
+        }
+        .logo.html{
+            width: 10%;
+        }
+
+        .logo.css{
+            width: 16% !important; ;
+        }
+        .logo.js{
+            width:10% ;
+        }
+        .logo.node{
+            width: 15% !important; 
+            margin-left: 2rem;
+        }
+        .logo.mongoDB{
+            width: 22% !important; 
+            margin-left: 2rem;
+        }
+
+        a.btn-main{
+            font-size: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .navigation__checkbox:checked ~ .navigation__background{
+            position: fixed;
+            transform: scale(40);
+          }
+        
+          .navigation__checkbox:checked ~ .navigation__nav{
+            width: 100%;
+            opacity: 1;
+          } 
+
+          .navigation__list{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+          }
+
+          .bar{
+            width: 30%;
+            height: 20px;
+          }
+
+          .project_h2{
+            font-size: 4rem !important;
+          }
+          .project__box{
+            width: 80%;
+          }
+
+          .contact-box{
+            width:70%;
+        }
+
+        .contact__h2{
+            font-size: 3rem !important;
+        }
+        
+    }
