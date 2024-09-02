@@ -23,7 +23,7 @@ function TeachStack() {
         {arry.map((item) => (
           <div key={item} className="bg-[#20202300] p-[2rem]">
             <a href="">
-              <img src={item} alt="" />
+              <img className="sm:w-[4rem]" src={item} alt="" />
             </a>
           </div>
         ))}
