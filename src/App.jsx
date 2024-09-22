@@ -11,14 +11,28 @@ function App() {
   const [isTheme, setTheme] = useState(true); // true == dark
   const [isMenu, setMenu] = useState(false); //phone menu btn click check
 
+  const code =
+    "const [isTheme, setTheme] = useState(true); const [isTheme, setTheme] = useState(true);const [isTheme, setTheme] = useState(true);";
+
+  const AppProps = {
+    isTheme,
+    setTheme,
+    isMenu,
+    setMenu,
+  };
+
   return (
-    <AppContext.Provider value={{ isTheme, setTheme, isMenu, setMenu }}>
+    <AppContext.Provider
+      value={{ AppProps, isTheme, setTheme, isMenu, setMenu }}
+    >
       <Navbar />
       <DarkMode />
-      {/* <SocialMedia /> */}
+
       <div className="w-[80%] my-0 mx-auto md:w-[90%]">
         <Home />
       </div>
+      {/* <SocialMedia /> */}
+
       <Footer />
     </AppContext.Provider>
   );

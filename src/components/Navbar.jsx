@@ -6,7 +6,8 @@ import CancelLight from "../assets/icon/cancel_light.svg";
 import CancelDark from "../assets/icon/cancel_dark.svg";
 
 function Navbar() {
-  const { isTheme, isMenu, setMenu } = useContext(AppContext);
+  const AppProps = useContext(AppContext);
+
   return (
     <nav>
       {/* DESKTOP */}
@@ -14,8 +15,8 @@ function Navbar() {
         <div className="logo text-[var(--text)]">
           <a
             className="download_cv"
-            href="../../public/React_Cv_Mehul_jorwekar.pdf"
-            download="Reat_Cv_Mehul_jorwekar.pdf"
+            href="/Portfolio/React_Cv_Mehul_jorwekar.pdf"
+            download="React_Cv_Mehul_jorwekar.pdf"
           >
             Download CV
           </a>
@@ -50,13 +51,21 @@ function Navbar() {
           className=" fixed top-4 right-4
         "
         >
-          {isTheme ? (
-            <img onClick={() => setMenu(!isMenu)} src={MenuLight} alt="" />
+          {AppProps.isTheme ? (
+            <img
+              onClick={() => AppProps.setMenu(!AppProps.isMenu)}
+              src={MenuLight}
+              alt=""
+            />
           ) : (
-            <img onClick={() => setMenu(!isMenu)} src={MenuDark} alt="" />
+            <img
+              onClick={() => AppProps.setMenu(!AppProps.isMenu)}
+              src={MenuDark}
+              alt=""
+            />
           )}
         </div>
-        {isMenu && (
+        {AppProps.isMenu && (
           <div className=" fixed top-0 right-0 bg-[var(--bg-color)] w-[70%] min-h-[100vh] px-4 py-8">
             <div
               className="logo flex
@@ -64,22 +73,22 @@ function Navbar() {
              "
             >
               <a
-                className="download_cv text-[1.5rem] "
-                href="../../public/React_Cv_Mehul_jorwekar.pdf"
-                download="Reat_Cv_Mehul_jorwekar.pdf"
+                className="download_cv"
+                href="/Portfolio/React_Cv_Mehul_jorwekar.pdf"
+                download="React_Cv_Mehul_jorwekar.pdf"
               >
                 Download CV
               </a>
-              {isTheme ? (
+              {AppProps.isTheme ? (
                 <img
-                  onClick={() => setMenu(false)}
+                  onClick={() => AppProps.setMenu(false)}
                   className="w-[1.5rem]"
                   src={CancelLight}
                   alt=""
                 />
               ) : (
                 <img
-                  onClick={() => setMenu(false)}
+                  onClick={() => AppProps.setMenu(false)}
                   className="w-[1.5rem]"
                   src={CancelDark}
                   alt=""
@@ -88,17 +97,25 @@ function Navbar() {
             </div>
             <div className="flex flex-col justify-around items-start text-[1.5rem]">
               <li>
-                <a href="#home">Home</a>
+                <a onClick={() => AppProps.setMenu(false)} href="#home">
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#techStack">Tech Stack</a>
+                <a onClick={() => AppProps.setMenu(false)} href="#techStack">
+                  Tech Stack
+                </a>
               </li>
               <li>
-                <a href="#myJourney">My Journey</a>
+                <a onClick={() => AppProps.setMenu(false)} href="#myJourney">
+                  My Journey
+                </a>
               </li>
               <li>
                 {" "}
-                <a href="#contact">Contact</a>
+                <a onClick={() => AppProps.setMenu(false)} href="#contact">
+                  Contact
+                </a>
               </li>
 
               <li className="cursor-not-allowed text-[var(--disable-btn)]">
